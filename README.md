@@ -9,6 +9,6 @@ Usage
 Clone this repository and run
 
     ./getlang.sh <lang>
-*If the file is not executable, type `chmod +x getlang.sh` and retry.*
+**Available languages:** fr - en - es - pt - de - it - nl*
 
-**Available languages:** fr - en - es - pt - de - it - nl
+If the file is not executable, type `chmod +x getlang.sh` and retry.*
