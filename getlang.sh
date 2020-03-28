@@ -1,5 +1,5 @@
 #!/bin/bash
-cdn="http://dofusretro.cdn.ankama.com"
+cdn="https://dofusretro.cdn.ankama.com"
 wget -P lang ${cdn}/lang/versions_$1.txt
 lang=$(<lang/versions_$1.txt)
 lang=${lang:3:-1}
