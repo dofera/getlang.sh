@@ -7,7 +7,7 @@ Usage
 
 Clone this repository and run
 
-    ./getlang.sh <language>
-**Available languages:** fr - en - es - pt - de - it - nl
+    ./getlang.sh [LANGUAGE]...
+**Available languages:** de - en - es - fr - it - nl - pt
 
 *If the file is not executable, type `chmod +x getlang.sh` and retry.*
