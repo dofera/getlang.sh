@@ -2,8 +2,12 @@
 
 readonly CDN="https://dofusretro.cdn.ankama.com"
 
-wget -qNP lang "${CDN}/lang/versions.swf" "${CDN}/lang/versions_${1}.txt"
+wget -qNP lang "${CDN}/lang/versions.swf"
 
-tail -c +4 "lang/versions_${1}.txt" | head -c -1 | tr ',' '_' | tr '|' '\n' | while read -r lang; do
-  wget -qNP lang/swf "${CDN}/lang/swf/${lang}.swf"
+for i in "$@"; do
+  wget -qNP lang "${CDN}/lang/versions_${i}.txt"
+
+  tail -c +4 "lang/versions_${i}.txt" | head -c -1 | tr ',' '_' | tr '|' '\n' | while read -r file; do
+    wget -qNP lang/swf "${CDN}/lang/swf/${file}.swf"
+  done
 done
